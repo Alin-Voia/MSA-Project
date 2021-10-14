@@ -1,0 +1,20 @@
+- ideea de level up
+- optiune de multiple vieti
+- ideea de shopuri si skinuri
+- poveste cu naratiune
+
+- un mod endless
+
+- un mod cu levele multiple care devin mai grele pe masura ce inaintezi si cu naratiune
+
+
+
+	pasul 1
+- facut ecranul de start basic cu functionalitati:
+1. buton de start care sa te bage in alta scena
+2. buton de exit care sa te scoata din joc
+
+
+	pasul 2
+- unul lucreaza la scena de dupa start
+- altul lucreaza la animatia din meniul principal
