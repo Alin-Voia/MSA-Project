@@ -7,7 +7,7 @@ public class StoryModeSceneControl : MonoBehaviour
 {
 	int sceneID;
 	
-	private PlayerAnimation playerAnim;
+	//private PlayerAnimation playerAnim;
 	private Rigidbody2D myBody;
 	
 	private float speed = 2f;
@@ -20,7 +20,7 @@ public class StoryModeSceneControl : MonoBehaviour
     //initializes sceneID with 0
     void Start()
     {
-		playerAnim = GetComponent<PlayerAnimation>();
+		//playerAnim = GetComponent<PlayerAnimation>();
 		myBody = GetComponent<Rigidbody2D>();
 	
     	sceneID = SceneManager.GetActiveScene().buildIndex;    
@@ -75,19 +75,19 @@ public class StoryModeSceneControl : MonoBehaviour
 	void MoveLeft() 
 	{
 		myBody.velocity = new Vector2(-speed, myBody.velocity.y);
-		playerAnim.ZombieWalk(true, true);
+		//playerAnim.ZombieWalk(true, true);
 	}
 
 	void MoveRight() 
 	{
 		myBody.velocity = new Vector2(speed, myBody.velocity.y);
-		playerAnim.ZombieWalk(true, false);
+		//playerAnim.ZombieWalk(true, false);
 	}
 
 
 	void StopMoving() 
 	{
-		playerAnim. ZombieStop();
+		//playerAnim.ZombieStop();
 		myBody.velocity = new Vector2(0f,myBody.velocity.y);
 	}
 
