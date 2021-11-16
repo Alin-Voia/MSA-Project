@@ -10,6 +10,7 @@ public class MainSceneControl : MonoBehaviour
 	//initializes sceneID with 0
 	void Start() 
 	{
+		Screen.orientation = ScreenOrientation.Portrait;
 		sceneID = SceneManager.GetActiveScene().buildIndex;
 	}
 	
@@ -24,6 +25,7 @@ public class MainSceneControl : MonoBehaviour
 	//if Story Mode button is pressed, the next level is loaded
     public void LoadNextLevel() 
 	{
+		Screen.orientation = ScreenOrientation.Landscape;
 		SceneManager.LoadScene(sceneID + 1);
 	}
 }
