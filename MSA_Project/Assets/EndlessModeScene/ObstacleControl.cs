@@ -10,6 +10,7 @@ public class ObstacleControl : MonoBehaviour
     public float frequency = 0.5f;
     float counter = 0.0f;
     public Transform obstacleSpawnLocation;
+    bool isGameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class ObstacleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isGameOver) return;
 
         if (counter <= 0.0f)
         {
@@ -47,5 +49,10 @@ public class ObstacleControl : MonoBehaviour
         GameObject newObstacle = Instantiate(obstacles[Random.Range(0, obstacles.Length)], obstacleSpawnLocation.position, Quaternion.identity) as GameObject;
         newObstacle.transform.parent = transform;
         counter = 1.0f;
+    }
+
+    public void GameOver() {
+        isGameOver = true;
+        //transform.GetComponent<GameController>().GameOver();
     }
 }
