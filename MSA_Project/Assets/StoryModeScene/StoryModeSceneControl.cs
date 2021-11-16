@@ -30,8 +30,11 @@ public class StoryModeSceneControl : MonoBehaviour
     void Update()
     {
 		//if back button is pressed, the previous scene will be loaded
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+			Screen.orientation = ScreenOrientation.Portrait;
 			SceneManager.LoadScene(sceneID - 1);
+		}
+			
 			
 		HandleMoving();
     }
