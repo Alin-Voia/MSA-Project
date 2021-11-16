@@ -53,6 +53,6 @@ public class ObstacleControl : MonoBehaviour
 
     public void GameOver() {
         isGameOver = true;
-        //transform.GetComponent<GameController>().GameOver();
+        transform.GetComponent<GameController>().GameOver();
     }
 }

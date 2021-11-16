@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
 
         if (other.collider.tag == "Ground")
@@ -44,12 +44,23 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+
     void OnCollisionExit2D(Collision2D other)
     {
 
         if (other.collider.tag == "Ground")
         {
             isGrounded = false;
+        }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.collider.tag == "Death")
+        {
+            GameOver();
         }
 
     }
