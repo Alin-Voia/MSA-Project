@@ -153,6 +153,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406791544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 99036376096192975, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+  m_PrefabInstance: {fileID: 36649357799535590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443857508
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,8 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1957273502}
   scoreText: {fileID: 1916689867}
-  bestScore: {fileID: 3385265063553736950, guid: e1762883abad41c4c97937f2725eca13, type: 3}
-  currentScore: {fileID: 6942417852020228898, guid: cdb50c55c7f391340abad7dbf23b974e, type: 3}
+  bestScore: {fileID: 1505024535}
+  currentScore: {fileID: 406791544}
 --- !u!1 &961850350
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +554,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1505024535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8267941609052056568, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+  m_PrefabInstance: {fileID: 36649357799535590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1916689867 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 36649359174889005, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
@@ -666,6 +688,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 443857511}
+    - target: {fileID: 36649359174889007, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 386.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649359174889007, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 293.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649359198825543, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649359417838599, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
 --- !u!1001 &8230767179968563027

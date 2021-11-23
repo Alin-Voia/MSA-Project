@@ -37,16 +37,17 @@ public class GameController : MonoBehaviour
         scoreText.gameObject.SetActive(false);
         
 
-        // if (score > PlayerPrefs.GetInt("Best", 0))
-        // {
-        //     PlayerPrefs.SetInt("Best", score);
-        // }
+        if (score > PlayerPrefs.GetInt("Best", 0))
+        {
+            PlayerPrefs.SetInt("Best", score);
+        }
 
-        // bestScore.text = "Top Score : " + PlayerPrefs.GetInt("Best", 0).ToString();
+        bestScore.text = "Top Score : " + PlayerPrefs.GetInt("Best", 0).ToString();
         currentScore.text = "Current Score : " + score.ToString();
 
-        gameOverPanel.SetActive(true);
         
+        
+        gameOverPanel.SetActive(true);
     } 
 
     public void IncrementScore() {
