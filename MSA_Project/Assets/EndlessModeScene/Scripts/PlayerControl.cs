@@ -13,12 +13,15 @@ public class PlayerControl : MonoBehaviour
     bool isGameOver = false;
     ObstacleControl myObstacleControl;
 
+    GameController myGameController;
+
     // Start is called before the first frame update
     void Start()
     {
         playerBody = transform.GetComponent<Rigidbody2D>();
         posX = transform.position.x;
         myObstacleControl = GameObject.FindObjectOfType<ObstacleControl>();
+        myGameController = GameObject.FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
@@ -69,4 +72,13 @@ public class PlayerControl : MonoBehaviour
         isGameOver = true;
         myObstacleControl.GameOver();
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Point") {
+            myGameController.IncrementScore();
+            //some audio
+            Destroy(other.gameObject);
+        }
+    }
+
 }

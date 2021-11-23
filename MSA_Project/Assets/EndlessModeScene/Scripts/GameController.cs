@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public Text scoreText;
 
+    public Text bestScore;
+    public Text currentScore;
+
+    int score = 0;
 
     void Start()
     {
@@ -29,19 +34,24 @@ public class GameController : MonoBehaviour
 
     
     void ShowOverPanel() {
-        // scoreText.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(false);
+        
 
         // if (score > PlayerPrefs.GetInt("Best", 0))
         // {
         //     PlayerPrefs.SetInt("Best", score);
-        //     newAlert.SetActive(true);
         // }
 
-        // bestText.text = "Best Score : " + PlayerPrefs.GetInt("Best", 0).ToString();
-        // currentText.text = "Current Score : " + score.ToString();
+        // bestScore.text = "Top Score : " + PlayerPrefs.GetInt("Best", 0).ToString();
+        currentScore.text = "Current Score : " + score.ToString();
 
-        // gameOverPanel.SetActive(true);
-        
         gameOverPanel.SetActive(true);
+        
     } 
+
+    public void IncrementScore() {
+        score++;
+        scoreText.text = score.ToString();
+    
+    }
 }
