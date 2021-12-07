@@ -37,11 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ObstacleControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\StoryModeSceneControl.cs" />
-     <Compile Include="Assets\testLevel\PlayerMovement.cs" />
-     <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
