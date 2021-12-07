@@ -16,8 +16,8 @@ public class PlayerControl : MonoBehaviour
     GameController myGameController;
 
         
-    AudioSource myAudioPlayer;
-
+    AudioSource soundEffectPlayer;
+    AudioSource musicPlayer;
     public AudioClip jumpSound;
     public AudioClip scoreSound;
     public AudioClip deadSound;
@@ -30,8 +30,9 @@ public class PlayerControl : MonoBehaviour
         posX = transform.position.x;
         myObstacleControl = GameObject.FindObjectOfType<ObstacleControl>();
         myGameController = GameObject.FindObjectOfType<GameController>();
-        myAudioPlayer = GameObject.FindObjectOfType<AudioSource>();
-        myAudioPlayer.Play();
+        soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
+        musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+        musicPlayer.Play();
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && isGrounded && !isGameOver) {
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
-            myAudioPlayer.PlayOneShot(jumpSound);
+            soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;
         }
         if (transform.position.x < posX && !isGameOver) {
@@ -81,15 +82,15 @@ public class PlayerControl : MonoBehaviour
 
     void GameOver() {
         isGameOver = true;
-        myAudioPlayer.PlayOneShot(deadSound);
-        myAudioPlayer.Stop();
+        soundEffectPlayer.PlayOneShot(deadSound,1.0f);
+        musicPlayer.Stop();
         myObstacleControl.GameOver();
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Point") {
             myGameController.IncrementScore();
-            myAudioPlayer.PlayOneShot(scoreSound);
+            soundEffectPlayer.PlayOneShot(scoreSound,1.0f);
             Destroy(other.gameObject);
         }
     }
