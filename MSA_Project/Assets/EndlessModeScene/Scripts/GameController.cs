@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
     public GameObject gameOverPanel;
     public Text scoreText;
 
+    public Text musicTitle;
+
     public Text bestScore;
     public Text currentScore;
 
@@ -48,11 +50,27 @@ public class GameController : MonoBehaviour
         
         
         gameOverPanel.SetActive(true);
+        
     } 
 
     public void IncrementScore() {
         score++;
         scoreText.text = score.ToString();
     
+    }
+
+    public void showMusicTitle(string musicTitle)
+    {
+        this.musicTitle.text = musicTitle;
+        this.musicTitle.enabled = true;
+        this.musicTitle.CrossFadeAlpha(0.0f, 0.0f, false);
+        this.musicTitle.CrossFadeAlpha(1.0f, 1.5f, false);
+
+        Invoke("disableMusicTitle", 3f);
+    }
+
+    private void disableMusicTitle()
+    {
+        this.musicTitle.CrossFadeAlpha(0.0f, 1.5f, false);
     }
 }

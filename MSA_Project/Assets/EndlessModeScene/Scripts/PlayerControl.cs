@@ -21,7 +21,8 @@ public class PlayerControl : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip scoreSound;
     public AudioClip deadSound;
-    public AudioClip backgroundMusic;
+    public AudioClip[] backgroundMusic;
+    public int currentSong;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +31,18 @@ public class PlayerControl : MonoBehaviour
         posX = transform.position.x;
         myObstacleControl = GameObject.FindObjectOfType<ObstacleControl>();
         myGameController = GameObject.FindObjectOfType<GameController>();
+
+
+        ShuffleMusic();
         soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+        currentSong = 0;
+        musicPlayer.clip = backgroundMusic[currentSong];
         musicPlayer.Play();
+        myGameController.showMusicTitle(backgroundMusic[currentSong].name);
+        // Invoke( "PlayNextTrack", backgroundMusic[currentSong].length );
+        Invoke( "PlayNextTrack", 10.0f );
+        
     }
 
     // Update is called once per frame
@@ -94,5 +104,37 @@ public class PlayerControl : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    void PlayNextTrack()
+    {
+        if(!isGameOver) 
+        {
+            if(currentSong < backgroundMusic.Length) currentSong ++;
+            else {
+                currentSong = 0;
+            }
+            musicPlayer.clip = backgroundMusic[currentSong];
+            musicPlayer.Play();
+            myGameController.showMusicTitle(backgroundMusic[currentSong].name);
+
+            // if(!isGameOver) Invoke( "PlayNextTrack", backgroundMusic[currentSong].length );
+            Invoke( "PlayNextTrack", 10.0f );
+        }
+        else
+        {
+            musicPlayer.Stop();
+        }
+    }
+
+    public void ShuffleMusic() {
+
+        AudioClip aux;
+        for (int i = 0; i < backgroundMusic.Length; i++) {
+            int rnd = Random.Range(0, backgroundMusic.Length);
+            aux = backgroundMusic[rnd];
+            backgroundMusic[rnd] = backgroundMusic[i];
+            backgroundMusic[i] = aux;
+        }
+     }
 
 }
