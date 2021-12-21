@@ -24,9 +24,15 @@ public class PlayerControl : MonoBehaviour
     public AudioClip[] backgroundMusic;
     public int currentSong;
 
+    private float stageDuration = 20.0f;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        Screen.orientation = ScreenOrientation.Landscape;
+
+
         playerBody = transform.GetComponent<Rigidbody2D>();
         posX = transform.position.x;
         myObstacleControl = GameObject.FindObjectOfType<ObstacleControl>();
@@ -41,7 +47,7 @@ public class PlayerControl : MonoBehaviour
         musicPlayer.Play();
         myGameController.showMusicTitle(backgroundMusic[currentSong].name);
         // Invoke( "PlayNextTrack", backgroundMusic[currentSong].length );
-        Invoke( "PlayNextTrack", 10.0f );
+        Invoke( "PlayNextTrack",  stageDuration);
         
     }
 
@@ -49,6 +55,11 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) && isGrounded && !isGameOver) {
+            playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
+            soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
+            isGrounded = false;
+        }
+        else if(Input.touchCount > 0 && isGrounded && !isGameOver) {
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
             soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
@@ -17,6 +18,9 @@ public class GameController : MonoBehaviour
     void Start()
     {
         gameOverPanel.SetActive(false);
+        
+        Image gameOverObj = gameOverPanel.GetComponent<Image>();
+        gameOverObj.color = Color.red;
     }
 
     // Update is called once per frame
@@ -30,8 +34,12 @@ public class GameController : MonoBehaviour
     }
 
     public void Restart() {
-        //Initiate.Fade(Application.loadedLevelName,Color.white,2.0f);
-        Application.LoadLevel(Application.loadedLevelName);
+        Screen.orientation = ScreenOrientation.Landscape;
+		SceneManager.LoadScene(2);
+    }
+
+    public void ExitToMainMenu() {
+		SceneManager.LoadScene(0);
     }
 
     
@@ -61,7 +69,7 @@ public class GameController : MonoBehaviour
 
     public void showMusicTitle(string musicTitle)
     {
-        this.musicTitle.text = musicTitle;
+        this.musicTitle.text ="- " + musicTitle + " -";
         this.musicTitle.enabled = true;
         this.musicTitle.CrossFadeAlpha(0.0f, 0.0f, false);
         this.musicTitle.CrossFadeAlpha(1.0f, 1.5f, false);

@@ -28,4 +28,11 @@ public class MainSceneControl : MonoBehaviour
 		Screen.orientation = ScreenOrientation.Landscape;
 		SceneManager.LoadScene(sceneID + 1);
 	}
+
+	public void LoadEndlessMode() 
+	{
+		Screen.orientation = ScreenOrientation.Landscape;
+		SceneManager.LoadScene(sceneID + 2);
+	}
+
 }

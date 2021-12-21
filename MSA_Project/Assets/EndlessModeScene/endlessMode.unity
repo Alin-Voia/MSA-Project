@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1957273502}
   scoreText: {fileID: 1916689867}
+  musicTitle: {fileID: 724365437}
   bestScore: {fileID: 1505024535}
   currentScore: {fileID: 406791544}
 --- !u!1 &634201284
@@ -258,7 +259,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d7109fd161d119f4db311f88bee6559f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.138
   m_Pitch: 1
@@ -730,7 +731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088481936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.76, y: 2.56, z: -10}
+  m_LocalPosition: {x: -4.53, y: 2.56, z: -10}
   m_LocalScale: {x: 4.0165224, y: 2.434256, z: 2.434256}
   m_Children: []
   m_Father: {fileID: 0}
@@ -967,6 +968,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 443857511}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 36649358616387829, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 36649358624836630, guid: 6af20b5b18bec104ba2254c7ed46b291, type: 3}
       propertyPath: m_Text
       value: 'Current Score: 0'
@@ -1052,5 +1081,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ad3b7b5d61910c94fa8ac7ce76271459, type: 3}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7380316fa5e14fbfbdb148d7ff71c, type: 3}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d7109fd161d119f4db311f88bee6559f, type: 3}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3674868a1356b714b9370d22af311052, type: 3}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: b1121367f6b625e439c1f0db945b7ae9, type: 3}
+    - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
+      propertyPath: backgroundMusic.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b46698bb2c1b7b4c828bcc1b34f0310, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
