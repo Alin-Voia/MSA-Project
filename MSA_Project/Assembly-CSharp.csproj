@@ -51,6 +51,7 @@
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ObstacleControl.cs" />
+     <Compile Include="Assets\jump.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\StoryModeSceneControl.cs" />
