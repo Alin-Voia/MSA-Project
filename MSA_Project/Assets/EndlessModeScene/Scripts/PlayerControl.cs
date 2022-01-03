@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour
 
     GameController myGameController;
 
+    SeasonChanger mySeasonChanger;
+
         
     AudioSource soundEffectPlayer;
     AudioSource musicPlayer;
@@ -24,7 +26,7 @@ public class PlayerControl : MonoBehaviour
     public AudioClip[] backgroundMusic;
     public int currentSong;
 
-    private float stageDuration = 20.0f;
+    private float seasonDuration = 20.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,17 +39,13 @@ public class PlayerControl : MonoBehaviour
         posX = transform.position.x;
         myObstacleControl = GameObject.FindObjectOfType<ObstacleControl>();
         myGameController = GameObject.FindObjectOfType<GameController>();
-
+        mySeasonChanger = GameObject.FindObjectOfType<SeasonChanger>();
 
         ShuffleMusic();
         soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
-        currentSong = 0;
-        musicPlayer.clip = backgroundMusic[currentSong];
-        musicPlayer.Play();
-        myGameController.showMusicTitle(backgroundMusic[currentSong].name);
-        // Invoke( "PlayNextTrack", backgroundMusic[currentSong].length );
-        Invoke( "PlayNextTrack",  stageDuration);
+        PlayNextTrack();
+  
         
     }
 
@@ -58,6 +56,7 @@ public class PlayerControl : MonoBehaviour
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
             soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;
+            mySeasonChanger.changeSeason(1);
         }
         else if(Input.touchCount > 0 && isGrounded && !isGameOver) {
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
@@ -120,16 +119,15 @@ public class PlayerControl : MonoBehaviour
     {
         if(!isGameOver) 
         {
-            if(currentSong < backgroundMusic.Length) currentSong ++;
-            else {
-                currentSong = 0;
-            }
+           
+
+            if(currentSong >= backgroundMusic.Length) currentSong = 0;
             musicPlayer.clip = backgroundMusic[currentSong];
             musicPlayer.Play();
             myGameController.showMusicTitle(backgroundMusic[currentSong].name);
-
+            currentSong++;
             // if(!isGameOver) Invoke( "PlayNextTrack", backgroundMusic[currentSong].length );
-            Invoke( "PlayNextTrack", 10.0f );
+            Invoke( "PlayNextTrack", seasonDuration );
         }
         else
         {

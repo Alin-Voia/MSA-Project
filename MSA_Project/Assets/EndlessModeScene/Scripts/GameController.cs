@@ -19,8 +19,6 @@ public class GameController : MonoBehaviour
     {
         gameOverPanel.SetActive(false);
         
-        Image gameOverObj = gameOverPanel.GetComponent<Image>();
-        gameOverObj.color = Color.red;
     }
 
     // Update is called once per frame
