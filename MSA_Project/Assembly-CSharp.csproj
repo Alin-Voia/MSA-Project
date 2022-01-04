@@ -53,6 +53,7 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\ObstacleControl.cs" />
      <Compile Include="Assets\jump.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
+     <Compile Include="Assets\cameraFollow.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\StoryModeSceneControl.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
