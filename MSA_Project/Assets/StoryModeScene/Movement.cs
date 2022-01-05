@@ -11,9 +11,15 @@ public class Movement : MonoBehaviour
     private float fallMultiplier = 2.5f;
 
     public LayerMask ground; //checks if its the ground layer so that the square can touch it
-    public Transform groundCheck; //object to check if square is touching ground
+    public Transform groundCheck1;//object to check if square is touching ground
+    public Transform groundCheck2;
+    public Transform groundCheck3;
+    public Transform groundCheck4;
     public float groundCheckRadius; //little area used to detect collisions
-    private bool isGrounded;
+    private bool isGrounded1;
+    private bool isGrounded2;
+    private bool isGrounded3;
+    private bool isGrounded4;
 
     public int maxNrJumps;
     private int nrJumps;
@@ -35,12 +41,16 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
+        isGrounded1 = Physics2D.OverlapCircle(groundCheck1.position, groundCheckRadius, ground);
+        isGrounded2 = Physics2D.OverlapCircle(groundCheck2.position, groundCheckRadius, ground);
+        isGrounded3 = Physics2D.OverlapCircle(groundCheck3.position, groundCheckRadius, ground);
+        isGrounded4 = Physics2D.OverlapCircle(groundCheck4.position, groundCheckRadius, ground);
 
         moveInputHorizontal = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
         rb.velocity = new Vector2(moveInputHorizontal, rb.velocity.y);
 
-        if (isGrounded){
+        if (isGrounded1 || isGrounded2 || isGrounded3 || isGrounded4)
+        {
             nrJumps = maxNrJumps;
         }
 
