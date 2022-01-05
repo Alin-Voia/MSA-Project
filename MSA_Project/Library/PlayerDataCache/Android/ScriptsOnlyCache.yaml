@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - Movement
     - ObstacleControl
     - PlayerControl
+    - SavePlayerPos
     - SeasonChanger
     - StoryModeSceneControl
     - back
@@ -22,6 +23,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -172,6 +175,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5008}
     - Class: 114
       Script: {instanceID: 5480}
+    - Class: 114
+      Script: {instanceID: 17350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -876,9 +881,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavePlayerPos
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
   - Assets/StoryModeScene/StoryModeScene.unity
   - Assets/EndlessModeScene/endlessMode.unity
-  playerPath: C:/Users/Acer/Desktop/squareMerged.apk
+  playerPath: C:/Users/Acer/Desktop/squareMergedSave.apk

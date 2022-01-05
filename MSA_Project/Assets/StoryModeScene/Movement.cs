@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Movement : MonoBehaviour
@@ -23,6 +24,14 @@ public class Movement : MonoBehaviour
 
     public int maxNrJumps;
     private int nrJumps;
+
+    SavePlayerPos playerPosData;
+
+    private void Awake() {
+
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+        playerPosData.PlayerPosLoad();
+    }
 
     // Start is called before the first frame update
     void Start()
