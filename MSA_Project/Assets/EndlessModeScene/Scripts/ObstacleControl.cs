@@ -35,7 +35,7 @@ public class ObstacleControl : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++) {
             currentChild = transform.GetChild(i).gameObject;
             ScrollObstacle(currentChild);
-            if (currentChild.transform.position.x <= -20.0f) {
+            if (currentChild.transform.position.x <= -35.0f) {
                 Destroy(currentChild);
             }
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeasonChanger : MonoBehaviour
 {
@@ -9,9 +10,20 @@ public class SeasonChanger : MonoBehaviour
 
     public Camera mainCam;
     public SpriteRenderer player;
-
     public SpriteRenderer floor;
 
+    public Image menu;
+    public Image header;
+    public Image restart;
+    public Image exit;
+    public Text headerText;
+    public Text restartText;
+    public Text exitText;
+    public Text topScore;
+    public Text currentScore;
+
+    public Text score;
+    public Text musicTitle;
 
     private int oldSeason;
     private int newSeason;
@@ -55,8 +67,36 @@ public class SeasonChanger : MonoBehaviour
             timer += Time.deltaTime;
             float lerp_Percentage = timer / time;
             
-            player.color = Color.Lerp(colorSet[0].darkest, colorSet[3].darkest,lerp_Percentage);
-            mainCam.backgroundColor = Color.Lerp(colorSet[0].lightest, colorSet[3].lightest,lerp_Percentage);
+            player.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            mainCam.backgroundColor = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            floor.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            menu.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            header.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+            restart.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            exit.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            headerText.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            restartText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            exitText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            topScore.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            currentScore.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            score.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+            musicTitle.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+
+
             yield return null;
         }
         change = false;
@@ -71,13 +111,13 @@ public class SeasonChanger : MonoBehaviour
                                    hexToColor("a2416b"),
                                    hexToColor("852747"));
         
-        colorSet[1] = new ColorSet(hexToColor("f5e8c7"),
-                                   hexToColor("deba9d"),
-                                   hexToColor("9e7777"),
-                                   hexToColor("6f4c5b"));
+        colorSet[1] = new ColorSet(hexToColor("ffdf91"),
+                                   hexToColor("eaac7f"),
+                                   hexToColor("91684a"),
+                                   hexToColor("493323"));
 
-        colorSet[2] = new ColorSet(hexToColor("d9e4dd"),
-                                   hexToColor("fbf7f0"),
+        colorSet[2] = new ColorSet(hexToColor("fbf7f0"),
+                                   hexToColor("d9e4dd"),
                                    hexToColor("cdc9c3"),
                                    hexToColor("555555"));
                                     
@@ -93,7 +133,7 @@ public class SeasonChanger : MonoBehaviour
     public void changeSeason(int newS)
     {
         oldSeason = newSeason;
-        newSeason = newS;
+        newSeason = 2;
         change = true;
         
     }

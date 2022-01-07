@@ -26,14 +26,16 @@ public class PlayerControl : MonoBehaviour
     public AudioClip[] backgroundMusic;
     public int currentSong;
 
-    private float seasonDuration = 20.0f;
+    private float seasonDuration = 5.0f;
+
+    private int nextSeason;
 
     // Start is called before the first frame update
     void Start()
     {
 
         Screen.orientation = ScreenOrientation.Landscape;
-
+        nextSeason = 1;
 
         playerBody = transform.GetComponent<Rigidbody2D>();
         posX = transform.position.x;
@@ -45,7 +47,8 @@ public class PlayerControl : MonoBehaviour
         soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         PlayNextTrack();
-  
+        Invoke("goNextSeason", 5.0f);
+        
         
     }
 
@@ -56,12 +59,12 @@ public class PlayerControl : MonoBehaviour
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
             soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;
-            mySeasonChanger.changeSeason(1);
         }
         else if(Input.touchCount > 0 && isGrounded && !isGameOver) {
             playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
             soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;
+            
         }
         if (transform.position.x < posX && !isGameOver) {
             GameOver();
@@ -133,6 +136,14 @@ public class PlayerControl : MonoBehaviour
         {
             musicPlayer.Stop();
         }
+    }
+
+    private void goNextSeason ()
+    {
+        mySeasonChanger.changeSeason(nextSeason);
+        nextSeason++;
+        if(nextSeason >= 4) nextSeason = 0;
+        Invoke("goNextSeason", seasonDuration);
     }
 
     public void ShuffleMusic() {
