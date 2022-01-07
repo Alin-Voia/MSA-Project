@@ -8,12 +8,14 @@ ScriptsOnlyBuild:
     - MainSceneControl
     - Movement
     - ObstacleControl
+    - Platform
     - PlayerControl
     - SavePlayerPos
     - SeasonChanger
     - StoryModeSceneControl
     - back
     - cameraFollow
+    - feet
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -176,7 +178,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 17350}
+      Script: {instanceID: 5584}
+    - Class: 114
+      Script: {instanceID: 23966}
+    - Class: 114
+      Script: {instanceID: 31414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -811,7 +817,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 97635e62f5d0801b8d2aaa41dab27573
+      Hash: 0b74d56c722947fcde78fd45a7132f86
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -865,6 +871,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavePlayerPos
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -883,10 +895,16 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
+      Hash: f3fae679e8480313c930a4492322855e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Platform
+  - hash:
+      serializedVersion: 2
       Hash: 83e769eee07fc231384c812eedbb8224
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SavePlayerPos
+    className: feet
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
