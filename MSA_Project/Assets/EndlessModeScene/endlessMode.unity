@@ -196,9 +196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 7
   obstacles:
-  - {fileID: 5165149734239347509, guid: 4a807246e6ab1a8408dbbceda0511db4, type: 3}
-  - {fileID: 184197471762295048, guid: da4264b4e52736f4d99443c504431e6f, type: 3}
-  - {fileID: 8981996068887415971, guid: bfeb6f5a4c47c344084c233287f78d12, type: 3}
+  - {fileID: 734371716233055395, guid: 4a807246e6ab1a8408dbbceda0511db4, type: 3}
+  - {fileID: 2072357768935459733, guid: 29e977352c1050c4b9ca3e5158647372, type: 3}
+  - {fileID: 1859720794475981919, guid: da4264b4e52736f4d99443c504431e6f, type: 3}
   frequency: 0.5
   obstacleSpawnLocation: {fileID: 193993763}
 --- !u!4 &443857510

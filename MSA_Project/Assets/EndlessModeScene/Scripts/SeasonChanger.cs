@@ -133,7 +133,7 @@ public class SeasonChanger : MonoBehaviour
     public void changeSeason(int newS)
     {
         oldSeason = newSeason;
-        newSeason = 2;
+        newSeason = newS;
         change = true;
         
     }
