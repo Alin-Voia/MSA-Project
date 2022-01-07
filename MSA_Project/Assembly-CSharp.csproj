@@ -47,9 +47,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\StoryModeScene\Platform.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\SeasonChanger.cs" />
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
+     <Compile Include="Assets\StoryModeScene\FallRespawn.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ObstacleControl.cs" />
      <Compile Include="Assets\jump.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
