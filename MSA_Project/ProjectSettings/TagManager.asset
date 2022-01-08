@@ -10,6 +10,7 @@ TagManager:
   - SoundEffects
   - Music
   - Platform
+  - background
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - ground
   - platform
-  - 
+  - background
   - 
   - 
   - 
@@ -64,4 +65,7 @@ TagManager:
     locked: 0
   - name: layer7
     uniqueID: 4186543969
+    locked: 0
+  - name: layer8
+    uniqueID: 4151260691
     locked: 0

@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	private float moveInputHorizontal;
-	public float moveSpeed = 6f;
+	public float moveSpeed = 10f;
     public float jumpForce = 9f;
     private float fallMultiplier = 2.5f;
 
@@ -27,10 +27,14 @@ public class Movement : MonoBehaviour
 
     SavePlayerPos playerPosData;
 
+
+    private float chX = 0;
+    //private float chY = 0;
+    //Vector2 checkp;
+    Vector2 checkpoint0;
     Vector2 checkpoint1;
     Vector2 checkpoint2;
-    Vector2 checkpoint3;
-    private int check1 = 0;
+    private int checkpointCheck = 0;
 
     private void Awake() {
 
@@ -42,9 +46,10 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        checkpoint1 = new Vector2(0, 0);
-        checkpoint2 = new Vector2(16, -1.3f);
-        checkpoint3 = new Vector2(54, -1.3f);
+        checkpoint0 = new Vector2(0, 0);
+        checkpoint1 = new Vector2(16, -1.3f);
+        checkpoint2 = new Vector2(58, -1.3f);
+        //checkp = new Vector2(0, 0)
         
         //Physics.gravity = new Vector3(0, -50, 0);
     }
@@ -60,23 +65,56 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        
+        
+        if (transform.position.x >= 53.5)
+        {
+            checkpointCheck = 2;
+            //chY = transform.position.y;
+            if (transform.position.y < -16 && checkpointCheck == 2)
+            {
+                //checkp = new Vector2(chX, chY);
+                transform.position = checkpoint2;
+            }
+                
+        }
+        else if (transform.position.x >= 16)
+        {
+            checkpointCheck = 1;
+            //chY = transform.position.y;
+            if (transform.position.y < -16 && checkpointCheck == 1)
+            {
+                //checkp = new Vector2(chX, chY);
+                transform.position = checkpoint1;
+            }
+                
+        }else if (transform.position.y < -16 && checkpointCheck == 0)
+            transform.position = checkpoint0;
 
 
-        if (transform.position.y < -16 && transform.position.x >= 53.5)
+
+        /*if (transform.position.x >= -20 && transform.position.x < 80)
         {
-            transform.position = checkpoint3;
-            //check1 = 1;
+            checkpointCheck = 2;
         }
-        else if (transform.position.y < -16 && transform.position.x >= 16)
+
+        else if (transform.position.x >= -20 && transform.position.x < 53.5)
         {
-            transform.position = checkpoint2;
-            //check1 = 1;
+            checkpointCheck = 1;
         }
-        else if (transform.position.y < -16)
-        {
+
+
+
+        if (transform.position.y < -16 && checkpointCheck == 0)
+            transform.position = checkpoint0;
+        else if (transform.position.y < -16 && checkpointCheck == 1)
             transform.position = checkpoint1;
-            //check1 = 1;
-        }
+        else if (transform.position.y < -16 && checkpointCheck == 2)
+            transform.position = checkpoint2;*/
+
+
+
+
 
 
         isGrounded1 = Physics2D.OverlapCircle(groundCheck1.position, groundCheckRadius, ground);
