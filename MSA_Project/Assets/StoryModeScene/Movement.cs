@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
     SavePlayerPos playerPosData;
 
 
-    private float chX = 0;
+    
     //private float chY = 0;
     //Vector2 checkp;
     Vector2 checkpoint0;

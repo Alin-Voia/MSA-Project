@@ -896,6 +896,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: c1d466d686d46985c838b0e0e31b96e6
+    assemblyName: Unity.VectorGraphics.dll
+    namespaceName: Unity.VectorGraphics
+    className: SVGImage
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
