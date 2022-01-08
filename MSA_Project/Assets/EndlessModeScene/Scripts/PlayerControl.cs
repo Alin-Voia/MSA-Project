@@ -140,10 +140,13 @@ public class PlayerControl : MonoBehaviour
 
     private void goNextSeason ()
     {
-        mySeasonChanger.changeSeason(nextSeason);
-        nextSeason++;
-        if(nextSeason >= 4) nextSeason = 0;
-        Invoke("goNextSeason", seasonDuration);
+        if(!isGameOver) 
+        {
+            mySeasonChanger.changeSeason(nextSeason);
+            nextSeason++;
+            if(nextSeason >= 4) nextSeason = 0;
+            Invoke("goNextSeason", seasonDuration);
+        }
     }
 
     public void ShuffleMusic() {
