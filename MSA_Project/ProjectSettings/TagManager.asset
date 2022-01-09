@@ -9,6 +9,8 @@ TagManager:
   - Point
   - SoundEffects
   - Music
+  - Platform
+  - background
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - ground
+  - platform
+  - background
   - 
   - 
   - 
@@ -57,4 +59,13 @@ TagManager:
     locked: 0
   - name: layer4
     uniqueID: 4033094537
+    locked: 0
+  - name: layer6
+    uniqueID: 3938199235
+    locked: 0
+  - name: layer7
+    uniqueID: 4186543969
+    locked: 0
+  - name: layer8
+    uniqueID: 4151260691
     locked: 0

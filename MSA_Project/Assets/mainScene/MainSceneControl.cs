@@ -35,4 +35,13 @@ public class MainSceneControl : MonoBehaviour
 		FindObjectOfType<ProgressSceneLoader>().LoadScene("endlessMode");
 	}
 
+	public void NewGame()
+    {
+		PlayerPrefs.DeleteKey("p_x");
+		PlayerPrefs.DeleteKey("p_y");
+		PlayerPrefs.DeleteKey("TimeToLoad");
+		PlayerPrefs.DeleteKey("Saved");
+		Screen.orientation = ScreenOrientation.Landscape;
+		SceneManager.LoadScene(sceneID + 1);
+	}
 }
