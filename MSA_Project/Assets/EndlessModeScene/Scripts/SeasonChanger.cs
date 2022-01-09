@@ -30,7 +30,7 @@ public class SeasonChanger : MonoBehaviour
 
     private bool change;
 
-
+    public float warpTime = 1.0f;
 
 
 
@@ -60,12 +60,12 @@ public class SeasonChanger : MonoBehaviour
      private IEnumerator UpdateSeason()
     {
         float timer = 0.0f;
-        float time = 1.0f;
         
-        while(timer <= time)
+        
+        while(timer <= warpTime)
             {
             timer += Time.deltaTime;
-            float lerp_Percentage = timer / time;
+            float lerp_Percentage = timer / warpTime;
             
             player.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
 

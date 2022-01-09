@@ -36,15 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\EndlessModeScene\Scripts\SeasonChanger.cs" />
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\ObstacleControl.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\StoryModeSceneControl.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
      <Compile Include="Assets\StoryModeScene\Movement.cs" />
-     <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
-     <Compile Include="Assets\EndlessModeScene\Scripts\SeasonChanger.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\ViewportHandler.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\CameraAnchor.cs" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

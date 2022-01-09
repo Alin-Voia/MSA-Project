@@ -24,9 +24,9 @@ public class PlayerControl : MonoBehaviour
     public AudioClip scoreSound;
     public AudioClip deadSound;
     public AudioClip[] backgroundMusic;
-    public int currentSong;
+    private int currentSong;
 
-    private float seasonDuration = 5.0f;
+    public float seasonDuration = 5.0f;
 
     private int nextSeason;
 
@@ -47,7 +47,9 @@ public class PlayerControl : MonoBehaviour
         soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         PlayNextTrack();
-        Invoke("goNextSeason", 5.0f);
+        myObstacleControl.changeObstacles(0);
+        Invoke("stopObstacles", seasonDuration - 3.0f);
+        Invoke("goNextSeason", seasonDuration);
         
         
     }
@@ -143,9 +145,20 @@ public class PlayerControl : MonoBehaviour
         if(!isGameOver) 
         {
             mySeasonChanger.changeSeason(nextSeason);
+            myObstacleControl.changeObstacles(nextSeason);
             nextSeason++;
             if(nextSeason >= 4) nextSeason = 0;
             Invoke("goNextSeason", seasonDuration);
+        }
+    }
+
+    
+    private void stopObstacles()
+    {
+        if(!isGameOver) 
+        {
+            myObstacleControl.pauseObstacle();
+            Invoke("stopObstacles", seasonDuration);
         }
     }
 
