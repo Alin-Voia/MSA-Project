@@ -46,8 +46,9 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\StoryModeSceneControl.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
-     <Compile Include="Assets\StoryModeScene\Movement.cs" />
      <Compile Include="Assets\mainScene\ProgressSceneLoader.cs" />
+     <Compile Include="Assets\StoryModeScene\Movement.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\FullScreenSprite.cs" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -716,6 +717,18 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.003">
+        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.003">
+        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics.Editor">
+        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

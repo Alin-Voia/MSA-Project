@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         PlayNextTrack();
         myObstacleControl.changeObstacles(0);
-        Invoke("stopObstacles", seasonDuration - 3.0f);
+        Invoke("stopObstacles", seasonDuration - 4.0f);
         Invoke("goNextSeason", seasonDuration);
         
         

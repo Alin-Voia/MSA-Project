@@ -30,9 +30,11 @@ public class SeasonChanger : MonoBehaviour
 
     private bool change;
 
-    public float warpTime = 1.0f;
+    public float warpTime;
 
-
+    
+    public SpriteRenderer backgroundRenderer;
+    public Sprite[] backgroundSprites;
 
 
 
@@ -41,8 +43,8 @@ public class SeasonChanger : MonoBehaviour
         setColors();
         oldSeason=0;
         newSeason=0;
+        backgroundRenderer.sprite = backgroundSprites[newSeason];
         change=false;
-
         
 
 
@@ -54,10 +56,11 @@ public class SeasonChanger : MonoBehaviour
         if(change)
         {
             StartCoroutine(UpdateSeason());
+            StartCoroutine(fadeOut());
         }
     }
 
-     private IEnumerator UpdateSeason()
+    private IEnumerator UpdateSeason()
     {
         float timer = 0.0f;
         
@@ -138,17 +141,6 @@ public class SeasonChanger : MonoBehaviour
         
     }
 
-    public void setSeason(int i)
-    {
-
-    }
-
-
-    private void myLerpColor()
-    {
-
-    }
-
     private Color32 hexToColor(string hex)
      {
          hex = hex.Replace ("0x", "");//in case the string is formatted 0xFFFFFF
@@ -164,4 +156,47 @@ public class SeasonChanger : MonoBehaviour
          return new Color32(r,g,b,a);
      }
 
+
+    IEnumerator fadeOut()
+    {
+        float counter = 0;
+        float duration = warpTime/2;
+        //Get current color
+        Color spriteColor = backgroundRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0.3f, counter / duration);
+
+            //Change alpha only
+            backgroundRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        StartCoroutine(fadeIn());
+
+    }
+
+
+    IEnumerator fadeIn( )
+    {
+        float counter = 0;
+        backgroundRenderer.sprite = backgroundSprites[newSeason];
+        float duration = warpTime/2;
+        Color spriteColor = backgroundRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(0.3f, 1, counter / duration);
+
+            //Change alpha only
+            backgroundRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+    }
 }
