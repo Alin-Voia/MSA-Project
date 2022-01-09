@@ -41,6 +41,7 @@ public class MainSceneControl : MonoBehaviour
 		PlayerPrefs.DeleteKey("p_y");
 		PlayerPrefs.DeleteKey("TimeToLoad");
 		PlayerPrefs.DeleteKey("Saved");
+		PlayerPrefs.SetInt("ch1", 0);
 		Screen.orientation = ScreenOrientation.Landscape;
 		SceneManager.LoadScene(sceneID + 1);
 	}

@@ -57,6 +57,8 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
      <Compile Include="Assets\cameraFollow.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\StoryModeScene\SaveText.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowText.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
      <Compile Include="Assets\StoryModeScene\Movement.cs" />
      <Compile Include="Assets\StoryModeScene\SavePlayerPos.cs" />

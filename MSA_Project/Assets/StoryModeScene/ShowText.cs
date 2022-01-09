@@ -12,7 +12,7 @@ public class ShowText : MonoBehaviour
     float textY;
     float squareX;
     float squareY;
-    private static int a = 0;
+    
     public GameObject square;
     //public string textValue;
     public TextMeshProUGUI textElement;
@@ -32,10 +32,10 @@ public class ShowText : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(square.transform.position.x >= squarePosX && a == 0)
+        if(square.transform.position.x >= squarePosX && PlayerPrefs.GetInt("ch1", 0) !=1)
         {
             StartCoroutine(WaitBeforeShow());
-            a = 1;
+            PlayerPrefs.SetInt("ch1", 1);
         }
         //textElement.transform.position = square.transform.position;
 
