@@ -33,8 +33,6 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        Screen.orientation = ScreenOrientation.Landscape;
         nextSeason = 1;
 
         playerBody = transform.GetComponent<Rigidbody2D>();

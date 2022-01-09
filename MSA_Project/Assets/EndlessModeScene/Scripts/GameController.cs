@@ -32,7 +32,6 @@ public class GameController : MonoBehaviour
     }
 
     public void Restart() {
-        Screen.orientation = ScreenOrientation.Landscape;
 		SceneManager.LoadScene(2);
     }
 
