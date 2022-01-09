@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
     Vector2 checkpoint0;
     Vector2 checkpoint1;
     Vector2 checkpoint2;
+    Vector2 checkpoint3;
     private int checkpointCheck = 0;
 
     private void Awake() {
@@ -49,8 +50,9 @@ public class Movement : MonoBehaviour
         checkpoint0 = new Vector2(0, 0);
         checkpoint1 = new Vector2(16, -1.3f);
         checkpoint2 = new Vector2(58, -1.3f);
+        checkpoint3 = new Vector2(114, -1.3f);
         //checkp = new Vector2(0, 0)
-        
+
         //Physics.gravity = new Vector3(0, -50, 0);
     }
 
@@ -65,9 +67,19 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        
-        
-        if (transform.position.x >= 53.5)
+
+        if (transform.position.x >= 103)
+        {
+            checkpointCheck = 3;
+            //chY = transform.position.y;
+            if (transform.position.y < -16 && checkpointCheck == 3)
+            {
+                //checkp = new Vector2(chX, chY);
+                transform.position = checkpoint3;
+            }
+
+        }
+        else if (transform.position.x >= 53.5)
         {
             checkpointCheck = 2;
             //chY = transform.position.y;
