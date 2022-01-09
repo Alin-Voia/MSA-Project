@@ -6,7 +6,16 @@ public class ObstacleControl : MonoBehaviour
 {
 
     public float scrollSpeed = 5.0f;
-    public GameObject[] obstacles;
+
+    private GameObject[] obstacles;
+
+    public GameObject[] SmObstacles;
+
+    public GameObject[] SpObstacles;
+
+    public GameObject[] FObstacles;
+
+    public GameObject[] WObstacles;
     public float frequency = 0.5f;
     float counter = 0.0f;
     public Transform obstacleSpawnLocation;
@@ -35,7 +44,7 @@ public class ObstacleControl : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++) {
             currentChild = transform.GetChild(i).gameObject;
             ScrollObstacle(currentChild);
-            if (currentChild.transform.position.x <= -20.0f) {
+            if (currentChild.transform.position.x <= -35.0f) {
                 Destroy(currentChild);
             }
         }
@@ -46,13 +55,44 @@ public class ObstacleControl : MonoBehaviour
     }
 
     void GenerateRandomObstacle() {
-        GameObject newObstacle = Instantiate(obstacles[Random.Range(0, obstacles.Length)], obstacleSpawnLocation.position, Quaternion.identity) as GameObject;
-        newObstacle.transform.parent = transform;
-        counter = 1.0f;
+        if(obstacles != null){
+            GameObject newObstacle = Instantiate(obstacles[Random.Range(0, obstacles.Length)], obstacleSpawnLocation.position, Quaternion.identity) as GameObject;
+            newObstacle.transform.parent = transform;
+            counter = 1.0f;
+        }
     }
 
     public void GameOver() {
         isGameOver = true;
         transform.GetComponent<GameController>().GameOver();
     }
+
+
+    public void pauseObstacle()
+    {
+        obstacles = null;
+    }
+
+    public void changeObstacles(int season)
+    {
+        switch(season){
+            case 0:
+                obstacles = SmObstacles;
+                break;
+            case 1:
+                obstacles = FObstacles;
+                break;
+            case 2:
+                obstacles = WObstacles;
+                break;
+            case 3:
+                obstacles = SpObstacles;
+                break;
+            default:
+                obstacles = null;
+                break;
+        }
+
+    }
+
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeasonChanger : MonoBehaviour
 {
@@ -9,18 +10,31 @@ public class SeasonChanger : MonoBehaviour
 
     public Camera mainCam;
     public SpriteRenderer player;
-
     public SpriteRenderer floor;
 
+    public Image menu;
+    public Image header;
+    public Image restart;
+    public Image exit;
+    public Text headerText;
+    public Text restartText;
+    public Text exitText;
+    public Text topScore;
+    public Text currentScore;
+
+    public Text score;
+    public Text musicTitle;
 
     private int oldSeason;
     private int newSeason;
 
     private bool change;
 
+    public float warpTime;
 
-
-
+    
+    public SpriteRenderer backgroundRenderer;
+    public Sprite[] backgroundSprites;
 
 
 
@@ -29,8 +43,8 @@ public class SeasonChanger : MonoBehaviour
         setColors();
         oldSeason=0;
         newSeason=0;
+        backgroundRenderer.sprite = backgroundSprites[newSeason];
         change=false;
-
         
 
 
@@ -42,21 +56,50 @@ public class SeasonChanger : MonoBehaviour
         if(change)
         {
             StartCoroutine(UpdateSeason());
+            StartCoroutine(fadeOut());
         }
     }
 
-     private IEnumerator UpdateSeason()
+    private IEnumerator UpdateSeason()
     {
         float timer = 0.0f;
-        float time = 1.0f;
         
-        while(timer <= time)
+        
+        while(timer <= warpTime)
             {
             timer += Time.deltaTime;
-            float lerp_Percentage = timer / time;
+            float lerp_Percentage = timer / warpTime;
             
-            player.color = Color.Lerp(colorSet[0].darkest, colorSet[3].darkest,lerp_Percentage);
-            mainCam.backgroundColor = Color.Lerp(colorSet[0].lightest, colorSet[3].lightest,lerp_Percentage);
+            player.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            mainCam.backgroundColor = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            floor.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            menu.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            header.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+            restart.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            exit.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
+            headerText.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            restartText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            exitText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            topScore.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            currentScore.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
+
+            score.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+            musicTitle.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
+
+
+
             yield return null;
         }
         change = false;
@@ -71,13 +114,13 @@ public class SeasonChanger : MonoBehaviour
                                    hexToColor("a2416b"),
                                    hexToColor("852747"));
         
-        colorSet[1] = new ColorSet(hexToColor("f5e8c7"),
-                                   hexToColor("deba9d"),
-                                   hexToColor("9e7777"),
-                                   hexToColor("6f4c5b"));
+        colorSet[1] = new ColorSet(hexToColor("ffdf91"),
+                                   hexToColor("eaac7f"),
+                                   hexToColor("91684a"),
+                                   hexToColor("493323"));
 
-        colorSet[2] = new ColorSet(hexToColor("d9e4dd"),
-                                   hexToColor("fbf7f0"),
+        colorSet[2] = new ColorSet(hexToColor("fbf7f0"),
+                                   hexToColor("d9e4dd"),
                                    hexToColor("cdc9c3"),
                                    hexToColor("555555"));
                                     
@@ -98,17 +141,6 @@ public class SeasonChanger : MonoBehaviour
         
     }
 
-    public void setSeason(int i)
-    {
-
-    }
-
-
-    private void myLerpColor()
-    {
-
-    }
-
     private Color32 hexToColor(string hex)
      {
          hex = hex.Replace ("0x", "");//in case the string is formatted 0xFFFFFF
@@ -124,4 +156,47 @@ public class SeasonChanger : MonoBehaviour
          return new Color32(r,g,b,a);
      }
 
+
+    IEnumerator fadeOut()
+    {
+        float counter = 0;
+        float duration = warpTime/2;
+        //Get current color
+        Color spriteColor = backgroundRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0.3f, counter / duration);
+
+            //Change alpha only
+            backgroundRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        StartCoroutine(fadeIn());
+
+    }
+
+
+    IEnumerator fadeIn( )
+    {
+        float counter = 0;
+        backgroundRenderer.sprite = backgroundSprites[newSeason];
+        float duration = warpTime/2;
+        Color spriteColor = backgroundRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(0.3f, 1, counter / duration);
+
+            //Change alpha only
+            backgroundRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+    }
 }
