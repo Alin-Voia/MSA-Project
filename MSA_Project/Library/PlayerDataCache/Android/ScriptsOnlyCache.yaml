@@ -10,9 +10,14 @@ ScriptsOnlyBuild:
     - ObstacleControl
     - Platform
     - PlayerControl
+    - ProgressSceneLoader
     - SavePlayerPos
     - SeasonChanger
     - ShowText
+    - ShowText2
+    - ShowTextNarrator
+    - ShowTextNarrator2
+    - ViewportHandler
     - back
     - cameraFollow
     Unity.2D.Animation.Editor.dll:
@@ -52,6 +57,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Shadow
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/EndlessModeScene/endlessMode.unity:
@@ -68,6 +74,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
@@ -88,21 +96,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1784}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2636}
     - Class: 114
-      Script: {instanceID: 2684}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2928}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3132}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3348}
+    - Class: 114
+      Script: {instanceID: 3464}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,43 +155,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
-    - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1864}
+      Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 1960}
+      Script: {instanceID: 1962}
     - Class: 114
-      Script: {instanceID: 2684}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3464}
     - Class: 114
-      Script: {instanceID: 4208}
+      Script: {instanceID: 3972}
     - Class: 114
-      Script: {instanceID: 4664}
+      Script: {instanceID: 4216}
     - Class: 114
-      Script: {instanceID: 5094}
+      Script: {instanceID: 4672}
     - Class: 114
-      Script: {instanceID: 5570}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 5676}
+      Script: {instanceID: 5582}
     - Class: 114
-      Script: {instanceID: 38544}
+      Script: {instanceID: 5688}
+    - Class: 114
+      Script: {instanceID: 75438}
+    - Class: 114
+      Script: {instanceID: 134210}
+    - Class: 114
+      Script: {instanceID: 135008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -226,29 +240,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1864}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 2250}
+      Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2684}
+      Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 4820}
+      Script: {instanceID: 3464}
     - Class: 114
-      Script: {instanceID: 5208}
+      Script: {instanceID: 4828}
+    - Class: 114
+      Script: {instanceID: 4972}
+    - Class: 114
+      Script: {instanceID: 5220}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -306,7 +326,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: 96173d1fcd5d740112ceae498404a75c
+      Hash: 6215f47ce30b0992d857fffcd47f53e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SeasonChanger
@@ -364,6 +384,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 503c8d9dff3c3d6020b983f72bed6fcf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraAnchor
   - hash:
       serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
@@ -474,7 +500,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: b773468d50f35590e36cf7019814802c
+      Hash: ddfcf5bd4ca83dce1a6a3b5181de5e67
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObstacleControl
@@ -508,6 +534,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: c5c598a6ef61b2596fd6c07a8f082861
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ViewportHandler
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -546,7 +578,7 @@ ScriptsOnlyBuild:
     className: cameraFollow
   - hash:
       serializedVersion: 2
-      Hash: f1beb73bf2eaef3eb7c16e88486e1a1d
+      Hash: 09128b379ffe9808ce79b4c42c1d4b3f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControl
@@ -646,6 +678,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 2eaa61852fa33baed5ce6c8f1d131686
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowText
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -804,6 +842,18 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FullScreenSprite
+  - hash:
+      serializedVersion: 2
+      Hash: e278dfbd0b9f6ecf2b47b0093eaba0a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProgressSceneLoader
+  - hash:
+      serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -822,7 +872,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 97635e62f5d0801b8d2aaa41dab27573
+      Hash: 622583b04b001aaf9cd86638c2fb327b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -900,10 +950,22 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 20da7f7f5e25dcff806aaee091685df8
+      Hash: 2eaa61852fa33baed5ce6c8f1d131686
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ShowText
+    className: ShowTextNarrator
+  - hash:
+      serializedVersion: 2
+      Hash: 54106c4a412dab17a01fc864a2cd9a27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowText2
+  - hash:
+      serializedVersion: 2
+      Hash: 54106c4a412dab17a01fc864a2cd9a27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowTextNarrator2
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
