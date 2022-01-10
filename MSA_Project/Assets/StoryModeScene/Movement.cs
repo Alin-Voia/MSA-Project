@@ -17,6 +17,10 @@ public class Movement : MonoBehaviour
     public Transform groundCheck2;
     public Transform groundCheck3;
     public Transform groundCheck4;
+    public Transform groundCheck5;//object to check if square is touching ground
+    public Transform groundCheck6;
+    public Transform groundCheck7;
+    public Transform groundCheck8;
     /*public Transform platformCheck1;
     public Transform platformCheck2;
     public Transform platformCheck3;
@@ -26,6 +30,10 @@ public class Movement : MonoBehaviour
     private bool isGrounded2;
     private bool isGrounded3;
     private bool isGrounded4;
+    private bool isGrounded5;
+    private bool isGrounded6;
+    private bool isGrounded7;
+    private bool isGrounded8;
     /*private bool isPlatform1;
     private bool isPlatform2;
     private bool isPlatform3;
@@ -52,6 +60,7 @@ public class Movement : MonoBehaviour
     Vector2 checkpoint2;
     Vector2 checkpoint3;
     Vector2 checkpoint4;
+    Vector2 checkpoint5;
     private int checkpointCheck = 0;
 
     private void Awake() {
@@ -69,6 +78,7 @@ public class Movement : MonoBehaviour
         checkpoint2 = new Vector2(58, -1.3f);
         checkpoint3 = new Vector2(114, -1.3f);
         checkpoint4 = new Vector2(146, -1.3f);
+        checkpoint5 = new Vector2(177, -0.8f);
 
     }
 
@@ -77,7 +87,18 @@ public class Movement : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x >= 143)
+        if (transform.position.x >= 172)
+        {
+            checkpointCheck = 5;
+
+            if (transform.position.y < -16 && checkpointCheck == 5)
+            {
+
+                transform.position = checkpoint5;
+            }
+
+        }
+        else if (transform.position.x >= 143)
         {
             checkpointCheck = 4;
 
@@ -149,7 +170,10 @@ public class Movement : MonoBehaviour
 
     void CheckGrounded()
     {
-        if(Physics2D.OverlapCircle(groundCheck1.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck2.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck3.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck4.position, groundCheckRadius, ground))
+        if(Physics2D.OverlapCircle(groundCheck1.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck2.position, groundCheckRadius, ground) 
+            || Physics2D.OverlapCircle(groundCheck3.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck4.position, groundCheckRadius, ground)
+            || Physics2D.OverlapCircle(groundCheck5.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck6.position, groundCheckRadius, ground)
+            || Physics2D.OverlapCircle(groundCheck7.position, groundCheckRadius, ground) || Physics2D.OverlapCircle(groundCheck8.position, groundCheckRadius, ground))
         {
             isGrounded = true;
             jumpCount = 0;

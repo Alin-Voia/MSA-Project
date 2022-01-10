@@ -5,6 +5,10 @@ using UnityEngine;
 public class SavePlayerPos : MonoBehaviour
 {
     public GameObject player;
+    public string coordX;
+    public string coordY;
+    public string Saved;
+    public string TimeToLoad;
 
     private void Start() {
 
@@ -12,16 +16,16 @@ public class SavePlayerPos : MonoBehaviour
 
             float pX = player.transform.position.x; 
             float pY = player.transform.position.y;
-            pX = PlayerPrefs.GetFloat("p_x");
-            pY = PlayerPrefs.GetFloat("p_y");
+            pX = PlayerPrefs.GetFloat("p_X");
+            pY = PlayerPrefs.GetFloat("p_Y");
             player.transform.position = new Vector2(pX, pY);
-            PlayerPrefs.SetInt("TimeToLoad", 0);
+            PlayerPrefs.SetInt(TimeToLoad, 0);
             PlayerPrefs.Save();
         }
     }
     public void PlayerPosSave() {
-        PlayerPrefs.SetFloat("p_x", player.transform.position.x);
-        PlayerPrefs.SetFloat("p_y", player.transform.position.y);
+        PlayerPrefs.SetFloat("p_X", player.transform.position.x);
+        PlayerPrefs.SetFloat("p_Y", player.transform.position.y);
         PlayerPrefs.SetInt("Saved", 1);
         PlayerPrefs.Save();
     }

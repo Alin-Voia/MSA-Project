@@ -19,30 +19,47 @@ public class CircleFollowSquare : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        circle.SetActive(false);
+        circle = GameObject.Find("IsometricDiamond");
+        circle.SetActive(true);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (square.transform.position.x >= squarePosX && PlayerPrefs.GetInt(txt1, 0) != 1)
         {
-            StartCoroutine(WaitBeforeShow());
+            //StartCoroutine(WaitBeforeShow());
             PlayerPrefs.SetInt(txt1, 1);
+            circle.SetActive(true);
+            textX = square.transform.position.x;
+            textY = square.transform.position.y;
+            circle.transform.position = new Vector3(textX - 0.9f, textY + 0.6f, 1f);
         }
-        textX = square.transform.position.x;
-        textY = square.transform.position.y;
-        circle.transform.position = new Vector3(textX - 0.9f, textY + 0.6f, 1f);
+
+
+
+
+        else if (square.transform.position.x <= 10 && PlayerPrefs.GetInt(txt1, 0) != 1)
+        {
+            //StartCoroutine(WaitBeforeShow());
+            PlayerPrefs.SetInt(txt1, 1);
+            circle.SetActive(true);
+            textX = square.transform.position.x;
+            textY = square.transform.position.y;
+            circle.transform.position = new Vector3(textX + 20f, textY - 20f, 1f);
+        }
+ 
 
         Vector3 desiredPosition = square.transform.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(circle.transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
+
     }
     private IEnumerator WaitBeforeShow()
     {
         yield return new WaitForSeconds(nrOfSecondsBefore);
-
-        circle.SetActive(true);
+        GameObject.Find("IsometricDiamond").SetActive(true);
+        //circle.SetActive(true);
 
         //yield return new WaitForSeconds(nrOfSecondsAfter);
 
