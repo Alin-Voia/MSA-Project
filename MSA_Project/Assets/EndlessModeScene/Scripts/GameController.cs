@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
+
     public Text scoreText;
 
     public Text musicTitle;
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         gameOverPanel.SetActive(false);
+        
         
     }
 
@@ -42,7 +44,7 @@ public class GameController : MonoBehaviour
     
     void ShowOverPanel() {
         scoreText.gameObject.SetActive(false);
-        
+        PlayerPrefs.SetInt("CurrentPlayerScore", score);
 
         if (score > PlayerPrefs.GetInt("Best", 0))
         {
@@ -55,6 +57,12 @@ public class GameController : MonoBehaviour
         
         
         gameOverPanel.SetActive(true);
+        
+    } 
+
+    public void ClosePanel() {
+
+        gameOverPanel.SetActive(false);
         
     } 
 
