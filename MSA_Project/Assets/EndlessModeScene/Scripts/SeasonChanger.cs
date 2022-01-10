@@ -14,9 +14,12 @@ public class SeasonChanger : MonoBehaviour
 
     public Image menu;
     public Image header;
+    public Image saveScore;
     public Image restart;
     public Image exit;
     public Text headerText;
+
+    public Text saveScoreText;
     public Text restartText;
     public Text exitText;
     public Text topScore;
@@ -80,11 +83,15 @@ public class SeasonChanger : MonoBehaviour
 
             header.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
 
+            saveScore.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
+
             restart.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
 
             exit.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
 
             headerText.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            saveScoreText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
 
             restartText.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
 
