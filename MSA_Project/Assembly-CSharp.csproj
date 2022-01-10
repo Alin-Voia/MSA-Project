@@ -61,6 +61,7 @@
      <Compile Include="Assets\cameraFollow.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\ShowTextNarrator2.cs" />
+     <Compile Include="Assets\StoryModeScene\Platform3points.cs" />
      <Compile Include="Assets\StoryModeScene\ShowText.cs" />
      <Compile Include="Assets\StoryModeScene\CircleFollowSquare.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />

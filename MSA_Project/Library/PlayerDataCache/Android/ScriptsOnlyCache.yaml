@@ -114,7 +114,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,25 +183,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 3974}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 4218}
+      Script: {instanceID: 3976}
     - Class: 114
-      Script: {instanceID: 4476}
+      Script: {instanceID: 4220}
     - Class: 114
-      Script: {instanceID: 4676}
+      Script: {instanceID: 4478}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4678}
     - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 4892}
     - Class: 114
-      Script: {instanceID: 5588}
+      Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 5694}
+      Script: {instanceID: 5590}
     - Class: 114
-      Script: {instanceID: 151826}
+      Script: {instanceID: 5696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,13 +268,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 4832}
+      Script: {instanceID: 4834}
     - Class: 114
-      Script: {instanceID: 4978}
+      Script: {instanceID: 4980}
     - Class: 114
-      Script: {instanceID: 5226}
+      Script: {instanceID: 5228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -644,6 +644,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: b4f1a1eff624a683ee30c8d58b33a9c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Platform3points
+  - hash:
+      serializedVersion: 2
       Hash: 69415240821be7986b27e72bf9609a30
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -978,12 +984,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: b4f1a1eff624a683ee30c8d58b33a9c2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Platform3points
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
