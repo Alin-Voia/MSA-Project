@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Story Mode
+  m_text: Load Story Mode
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 087d70bed0534754bb0e7e7518cdfad7, type: 2}
   m_sharedMaterial: {fileID: -1228302607112833334, guid: 087d70bed0534754bb0e7e7518cdfad7, type: 2}
@@ -296,7 +296,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2, y: 102.39}
-  m_SizeDelta: {x: 249, y: 154.45}
+  m_SizeDelta: {x: 288.5, y: 154.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375727709
 MonoBehaviour:
@@ -544,8 +544,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9999999, y: 323}
-  m_SizeDelta: {x: 249, y: 154.45}
+  m_AnchoredPosition: {x: 0.69, y: 323}
+  m_SizeDelta: {x: 268.75, y: 154.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &658145008
 Animator:
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Game
+  m_text: New Story Mode
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 087d70bed0534754bb0e7e7518cdfad7, type: 2}
   m_sharedMaterial: {fileID: -1228302607112833334, guid: 087d70bed0534754bb0e7e7518cdfad7, type: 2}

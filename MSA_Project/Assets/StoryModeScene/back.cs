@@ -6,21 +6,22 @@ using UnityEngine.SceneManagement;
 public class back : MonoBehaviour
 {
 	SavePlayerPos playerPosData;
-	//SaveText textData;
+
 
 	void Start() {
 		playerPosData = FindObjectOfType<SavePlayerPos>();
-		//textData = FindObjectOfType<SaveText>();
+
 	}
 
-	public void LoadScene (string sceneName)
-	{
-		playerPosData.PlayerPosSave();
 
-		//textData.TextSave();
+		public void LoadScene(string sceneName)
+		{
+			playerPosData.PlayerPosSave();
 
-		SceneManager.LoadScene(sceneName);
-		Screen.orientation = ScreenOrientation.Portrait;
-	}
 
+			SceneManager.LoadScene(sceneName);
+			Screen.orientation = ScreenOrientation.Portrait;
+		}
+
+	
 }
