@@ -42,6 +42,7 @@ public class MainSceneControl : MonoBehaviour
 		PlayerPrefs.DeleteKey("TimeToLoad");
 		PlayerPrefs.DeleteKey("Saved");
 		PlayerPrefs.SetInt("circle", 0);
+		PlayerPrefs.SetInt("hexaDisappear", 0);
 		PlayerPrefs.SetInt("txt1", 0);
 		PlayerPrefs.SetInt("txt2", 0);
 		PlayerPrefs.SetInt("txt3", 0);
@@ -80,6 +81,23 @@ public class MainSceneControl : MonoBehaviour
 		PlayerPrefs.SetInt("txt36", 0);
 		PlayerPrefs.SetInt("txt37", 0);
 		PlayerPrefs.SetInt("txt38", 0);
+		PlayerPrefs.SetInt("txt39", 0);
+		PlayerPrefs.SetInt("txt40", 0);
+		PlayerPrefs.SetInt("txt41", 0);
+		PlayerPrefs.SetInt("txt42", 0);
+		PlayerPrefs.SetInt("txt43", 0);
+		PlayerPrefs.SetInt("txt44", 0);
+		PlayerPrefs.SetInt("txt45", 0);
+		PlayerPrefs.SetInt("txt46", 0);
+		PlayerPrefs.SetInt("txt47", 0);
+		PlayerPrefs.SetInt("txt49", 0);
+		PlayerPrefs.SetInt("txt50", 0);
+		PlayerPrefs.SetInt("txt51", 0);
+		PlayerPrefs.SetInt("txt52", 0);
+		PlayerPrefs.SetInt("txt53", 0);
+		PlayerPrefs.SetInt("txt54", 0);
+		PlayerPrefs.SetInt("txt55", 0);
+		PlayerPrefs.SetInt("txt56", 0);
 		Screen.orientation = ScreenOrientation.Landscape;
 		SceneManager.LoadScene(sceneID + 1);
 	}

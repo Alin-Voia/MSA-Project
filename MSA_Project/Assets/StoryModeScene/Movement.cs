@@ -61,6 +61,9 @@ public class Movement : MonoBehaviour
     Vector2 checkpoint3;
     Vector2 checkpoint4;
     Vector2 checkpoint5;
+    Vector2 checkpoint6;
+    Vector2 checkpoint7;
+    Vector2 checkpoint8;
     private int checkpointCheck = 0;
 
     private void Awake() {
@@ -79,6 +82,8 @@ public class Movement : MonoBehaviour
         checkpoint3 = new Vector2(114, -1.3f);
         checkpoint4 = new Vector2(146, -1.3f);
         checkpoint5 = new Vector2(177, -0.8f);
+        checkpoint6 = new Vector2(212, -2.8f);
+        checkpoint7 = new Vector2(244, 52.5f);
 
     }
 
@@ -86,8 +91,30 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x >= 271)
+        {
+            checkpointCheck = 7;
 
-        if (transform.position.x >= 172)
+            if (transform.position.y < -16 && checkpointCheck == 7)
+            {
+
+                transform.position = checkpoint7;
+            }
+
+        }
+
+        else if (transform.position.x >= 204)
+        {
+            checkpointCheck = 6;
+
+            if (transform.position.y < -16 && checkpointCheck == 6)
+            {
+
+                transform.position = checkpoint6;
+            }
+
+        }
+        else if (transform.position.x >= 172)
         {
             checkpointCheck = 5;
 
@@ -143,6 +170,11 @@ public class Movement : MonoBehaviour
 
         mx = CrossPlatformInputManager.GetAxis("Horizontal");
         if(CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }

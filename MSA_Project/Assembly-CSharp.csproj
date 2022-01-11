@@ -51,6 +51,7 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\SeasonChanger.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\CameraAnchor.cs" />
      <Compile Include="Assets\StoryModeScene\ShowText2.cs" />
+     <Compile Include="Assets\StoryModeScene\BossControl.cs" />
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <Compile Include="Assets\StoryModeScene\FallRespawn.cs" />
@@ -61,8 +62,10 @@
      <Compile Include="Assets\cameraFollow.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\ShowTextNarrator2.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowTextBoss.cs" />
      <Compile Include="Assets\StoryModeScene\Platform3points.cs" />
      <Compile Include="Assets\StoryModeScene\ShowText.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\LeaderBoardController.cs" />
      <Compile Include="Assets\StoryModeScene\CircleFollowSquare.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\FullScreenSprite.cs" />
@@ -303,6 +306,9 @@
  </Reference>
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>D:/Programs/Unity Hub/Unity editor/Unity 2020.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/Programs/Github repos/MSA-Project/MSA_Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Programs/Unity Hub/Unity editor/Unity 2020.3.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -756,6 +762,11 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{344E4732-76CF-F9E6-6911-295E2F4B4A90}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="lootlocker.lootlockersdk.runtime.csproj">
+      <Project>{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}</Project>
+      <Name>lootlocker.lootlockersdk.runtime</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
