@@ -12,6 +12,7 @@ public class SeasonChanger : MonoBehaviour
     public SpriteRenderer player;
     public SpriteRenderer floor;
 
+    public Image pause;
     public Image menu;
     public Image header;
     public Image saveScore;
@@ -80,6 +81,8 @@ public class SeasonChanger : MonoBehaviour
             floor.color = Color.Lerp(colorSet[oldSeason].light, colorSet[newSeason].light,lerp_Percentage);
 
             menu.color = Color.Lerp(colorSet[oldSeason].lightest, colorSet[newSeason].lightest,lerp_Percentage);
+
+            pause.color = Color.Lerp(colorSet[oldSeason].darkest, colorSet[newSeason].darkest,lerp_Percentage);
 
             header.color = Color.Lerp(colorSet[oldSeason].dark, colorSet[newSeason].dark,lerp_Percentage);
 

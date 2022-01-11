@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
         myGameController = GameObject.FindObjectOfType<GameController>();
         mySeasonChanger = GameObject.FindObjectOfType<SeasonChanger>();
 
-        ShuffleMusic();
+        //ShuffleMusic();
         soundEffectPlayer = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<AudioSource>();
         musicPlayer = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         PlayNextTrack();
