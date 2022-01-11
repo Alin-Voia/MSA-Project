@@ -140,7 +140,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    public IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration)
+    IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration)
     {
         float counter = 0f;
 

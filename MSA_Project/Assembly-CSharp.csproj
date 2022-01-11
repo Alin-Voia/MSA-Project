@@ -50,12 +50,12 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\StoryModeScene\SaveText.cs" />
      <Compile Include="Assets\StoryModeScene\ShowText.cs" />
+     <Compile Include="Assets\EndlessModeScene\Scripts\LeaderBoardController.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\FullScreenSprite.cs" />
      <Compile Include="Assets\mainScene\ProgressSceneLoader.cs" />
      <Compile Include="Assets\StoryModeScene\Movement.cs" />
      <Compile Include="Assets\StoryModeScene\SavePlayerPos.cs" />
-     <Compile Include="Assets\EndlessModeScene\Scripts\LeaderBoardController.cs" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\mainScene\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -671,6 +671,9 @@
     <Reference Include="Unity.Timeline">
         <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="lootlocker.lootlockersdk.runtime">
+        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\lootlocker.lootlockersdk.runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
@@ -739,9 +742,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="lootlocker.lootlockersdk.runtime">
-        <HintPath>C:\Users\Vlad\Desktop\MSA\MSA-Project\MSA_Project\Library\ScriptAssemblies\lootlocker.lootlockersdk.runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

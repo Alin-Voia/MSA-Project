@@ -569,17 +569,24 @@ MonoBehaviour:
   scrollSpeed: 12
   SmObstacles:
   - {fileID: 2475687992138337934, guid: da4264b4e52736f4d99443c504431e6f, type: 3}
-  - {fileID: 8046579284485154247, guid: 4a807246e6ab1a8408dbbceda0511db4, type: 3}
+  - {fileID: 2377279915348754483, guid: 8bc2080b26052704794679fdc03b6168, type: 3}
+  - {fileID: 4134209248145883607, guid: ddf17102b5db6a9428f975ff27ea2fa0, type: 3}
   - {fileID: 4914363461037063681, guid: 0b9a116b605c4024fab5fb342bfab501, type: 3}
+  - {fileID: 8046579284485154247, guid: 4a807246e6ab1a8408dbbceda0511db4, type: 3}
   SpObstacles:
+  - {fileID: 1995347397589248097, guid: 36d9731c09ddaec4cbec21c13f468b9d, type: 3}
+  - {fileID: 4171126735883853429, guid: d7283d67af6418f49a3ba9e26b39858c, type: 3}
   - {fileID: 4629981957899794640, guid: c0e59722fa873db4b90eee053224260b, type: 3}
-  - {fileID: 431625645562539373, guid: 36d9731c09ddaec4cbec21c13f468b9d, type: 3}
   FObstacles:
   - {fileID: 615019284458398519, guid: 09cd4a9af78b4ed4995bc7af58f2bc67, type: 3}
+  - {fileID: 8876465672829213413, guid: c3c13bb80c38ef540976de5e3b00fd96, type: 3}
+  - {fileID: 3143612446077987035, guid: fac8b18cae396bd4a92f4e6722388cad, type: 3}
   - {fileID: 5334065044829759533, guid: 818e81520297a8c43a98369c5a527b52, type: 3}
   WObstacles:
-  - {fileID: 5085439551861235657, guid: ba4bf9d3454d3964a944a06584f1bba9, type: 3}
   - {fileID: 7291202332803167929, guid: 1360be55c3be67745bdfdeae4933b2ad, type: 3}
+  - {fileID: 322273326153720435, guid: b2209fba9ab26d64284f335647db755d, type: 3}
+  - {fileID: 7594695323892566408, guid: 1a91e58c5bbab1140944c44a3d208ec2, type: 3}
+  - {fileID: 5085439551861235657, guid: ba4bf9d3454d3964a944a06584f1bba9, type: 3}
   frequency: 0.5
   obstacleSpawnLocation: {fileID: 193993763}
 --- !u!4 &443857510
@@ -1133,7 +1140,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1637,7 +1644,7 @@ Transform:
   m_LocalScale: {x: 63.738346, y: 3.977413, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1323838931
 BoxCollider2D:
@@ -3229,7 +3236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4409069485990491392, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4409069485990491392, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3277,7 +3284,7 @@ PrefabInstance:
       objectReference: {fileID: 2086486384}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: seasonDuration
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: playerBodyImage
@@ -3290,19 +3297,19 @@ PrefabInstance:
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: backgroundMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 3674868a1356b714b9370d22af311052, type: 3}
+      objectReference: {fileID: 8300000, guid: e6878ebbc61bb81408ff73bb641d0af3, type: 3}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: backgroundMusic.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: b1121367f6b625e439c1f0db945b7ae9, type: 3}
+      objectReference: {fileID: 8300000, guid: 66578e290f32ccd4b8053ae0547e54a1, type: 3}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: backgroundMusic.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 6b46698bb2c1b7b4c828bcc1b34f0310, type: 3}
+      objectReference: {fileID: 8300000, guid: 2c24e577c7089c148b44b7c5e592e0f3, type: 3}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: backgroundMusic.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: ad3b7b5d61910c94fa8ac7ce76271459, type: 3}
+      objectReference: {fileID: 8300000, guid: b4c8c65b787532b4e9ebc239a0a2240a, type: 3}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: backgroundMusic.Array.data[4]
       value: 
