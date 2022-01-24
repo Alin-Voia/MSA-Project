@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.lootlocker.lootlockersdk": "file:D:/Programs/Github repos/MSA-Project/unity-sdk-1.1.1/unity-sdk-1.1.1",
+    "com.lootlocker.lootlockersdk": "file:C:/Users/Vlad/Desktop/Unity/MSA-Project/unity-sdk-1.1.1",
     "com.unity.2d.animation": "5.0.7",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.1.0",

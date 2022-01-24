@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0E3DDF9F-1398-5049-45B5-6B787B7112C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lootlocker.lootlockersdk.runtime", "lootlocker.lootlockersdk.runtime.csproj", "{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{344E4732-76CF-F9E6-6911-295E2F4B4A90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{BFF1A60C-7FD5-4183-F152-1AB122399CB6}"
@@ -19,10 +17,6 @@ Global
 		{0E3DDF9F-1398-5049-45B5-6B787B7112C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E3DDF9F-1398-5049-45B5-6B787B7112C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E3DDF9F-1398-5049-45B5-6B787B7112C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{344E4732-76CF-F9E6-6911-295E2F4B4A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{344E4732-76CF-F9E6-6911-295E2F4B4A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{344E4732-76CF-F9E6-6911-295E2F4B4A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
