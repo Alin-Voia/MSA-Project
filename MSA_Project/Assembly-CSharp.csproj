@@ -50,6 +50,8 @@
      <Compile Include="Assets\StoryModeScene\Platform.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\SeasonChanger.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\CameraAnchor.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowText2.cs" />
+     <Compile Include="Assets\StoryModeScene\BossControl.cs" />
      <Compile Include="Assets\mainScene\MainSceneControl.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\GameController.cs" />
      <Compile Include="Assets\StoryModeScene\FallRespawn.cs" />
@@ -59,11 +61,15 @@
      <Compile Include="Assets\EndlessModeScene\Scripts\ColorSet.cs" />
      <Compile Include="Assets\cameraFollow.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\PlayerControl.cs" />
-     <Compile Include="Assets\StoryModeScene\SaveText.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowTextNarrator2.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowTextBoss.cs" />
+     <Compile Include="Assets\StoryModeScene\Platform3points.cs" />
      <Compile Include="Assets\StoryModeScene\ShowText.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\LeaderBoardController.cs" />
+     <Compile Include="Assets\StoryModeScene\CircleFollowSquare.cs" />
      <Compile Include="Assets\StoryModeScene\back.cs" />
      <Compile Include="Assets\EndlessModeScene\Scripts\FullScreenSprite.cs" />
+     <Compile Include="Assets\StoryModeScene\ShowTextNarrator.cs" />
      <Compile Include="Assets\mainScene\ProgressSceneLoader.cs" />
      <Compile Include="Assets\StoryModeScene\Movement.cs" />
      <Compile Include="Assets\StoryModeScene\SavePlayerPos.cs" />

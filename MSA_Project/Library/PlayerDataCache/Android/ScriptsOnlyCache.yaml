@@ -93,6 +93,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -100,31 +102,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 1654}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3126}
-    - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3148}
     - Class: 114
       Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3284}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3506}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 4396}
+      Script: {instanceID: 3524}
+    - Class: 114
+      Script: {instanceID: 4404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -142,6 +144,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/StoryModeScene/StoryModeScene.unity:
     - Class: 1
@@ -173,53 +177,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 1576}
+      Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 1874}
+      Script: {instanceID: 1916}
     - Class: 114
-      Script: {instanceID: 1882}
+      Script: {instanceID: 1924}
     - Class: 114
-      Script: {instanceID: 1972}
+      Script: {instanceID: 2014}
     - Class: 114
-      Script: {instanceID: 2420}
+      Script: {instanceID: 2460}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2850}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2938}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3264}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3368}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3508}
     - Class: 114
-      Script: {instanceID: 3506}
+      Script: {instanceID: 3524}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 4030}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4274}
     - Class: 114
-      Script: {instanceID: 4528}
+      Script: {instanceID: 4536}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 4948}
+      Script: {instanceID: 4950}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5172}
     - Class: 114
-      Script: {instanceID: 5664}
+      Script: {instanceID: 5652}
     - Class: 114
-      Script: {instanceID: 5774}
+      Script: {instanceID: 5758}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,33 +272,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 1754}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 1874}
+      Script: {instanceID: 1916}
     - Class: 114
-      Script: {instanceID: 2264}
+      Script: {instanceID: 2304}
     - Class: 114
-      Script: {instanceID: 2450}
+      Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2900}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 2938}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3524}
     - Class: 114
-      Script: {instanceID: 3506}
+      Script: {instanceID: 4892}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 5038}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 5288}
     - Class: 114
-      Script: {instanceID: 5292}
+      Script: {instanceID: 21594}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -352,7 +356,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: d61346b3990b1f5188b10dbc2775498f
+      Hash: 087662ed50d387598889205e4dc0f3fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SeasonChanger
@@ -490,7 +494,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: b8c9b60247fcff1cec90e5dbbb00070c
+      Hash: 27401ac5aba806f7226119f96c782a9f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -512,12 +516,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
-  - hash:
-      serializedVersion: 2
-      Hash: 25544604d77a22d6026841c47c9ee0d2
-    assemblyName: lootlocker.lootlockersdk.runtime.dll
-    namespaceName: LootLocker
-    className: LootLockerConfig
   - hash:
       serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
@@ -898,12 +896,6 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: lootlocker.lootlockersdk.runtime.dll
-    namespaceName: LootLocker
-    className: LootLockerServerManager
-  - hash:
-      serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1034,9 +1026,21 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: lootlocker.lootlockersdk.runtime.dll
+    namespaceName: LootLocker
+    className: LootLockerServerManager
+  - hash:
+      serializedVersion: 2
+      Hash: 25544604d77a22d6026841c47c9ee0d2
+    assemblyName: lootlocker.lootlockersdk.runtime.dll
+    namespaceName: LootLocker
+    className: LootLockerConfig
   platform: 13
   scenePathNames:
   - Assets/mainScene/mainMenu.unity
   - Assets/StoryModeScene/StoryModeScene.unity
   - Assets/EndlessModeScene/endlessMode.unity
-  playerPath: C:/Users/Acer/Desktop/square.apk
+  playerPath: C:/Users/Vlad/Downloads/cube.apk

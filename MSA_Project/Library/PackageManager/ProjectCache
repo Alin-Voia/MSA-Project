@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637786496843072108
-    m_Hash: 2998683266
+      ticks: 637786507053665891
+    m_Hash: 242431621
   m_LockFileStatus:
     m_FilePath: C:/Users/Vlad/Desktop/Unity/MSA-Project/MSA_Project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637786496843151893
-    m_Hash: 2851580399
+      ticks: 637786507053745692
+    m_Hash: 4061400139
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.lootlocker.lootlockersdk@file:C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1
+    - packageId: com.lootlocker.lootlockersdk@file:C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1\unity-sdk-1.1.1
       testable: 0
       isDirectDependency: 1
       version: 1.0.7
       source: 4
-      resolvedPath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1
+      resolvedPath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1\unity-sdk-1.1.1
       assetPath: Packages/com.lootlocker.lootlockersdk
       name: com.lootlocker.lootlockersdk
       displayName: LootLocker
@@ -3856,14 +3856,14 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus:
-    - m_FilePath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1/package.json
+    - m_FilePath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1\unity-sdk-1.1.1/package.json
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637786493005553076
+        ticks: 637786504655229789
       m_Hash: 1902638240
-    - m_FilePath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1
+    - m_FilePath: C:\Users\Vlad\Desktop\Unity\MSA-Project\unity-sdk-1.1.1\unity-sdk-1.1.1
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
