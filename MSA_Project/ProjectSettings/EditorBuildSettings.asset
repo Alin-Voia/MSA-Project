@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EndlessModeScene/endlessMode.unity
     guid: 3c4bb93f52137c3489c9609e0711674d
+  - enabled: 1
+    path: Assets/LoadingScreen/loadingScreen.unity
+    guid: 7cae892d3f9012045810e8adbf8d8adb
   m_configObjects: {}

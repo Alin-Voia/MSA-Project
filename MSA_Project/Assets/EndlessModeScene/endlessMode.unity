@@ -1366,14 +1366,14 @@ RectTransform:
   m_GameObject: {fileID: 1144888811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5316608, y: 1.7124001, z: 1}
+  m_LocalScale: {x: 0.66440994, y: 2.671344, z: 1}
   m_Children: []
   m_Father: {fileID: 931494241}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 65.998314, y: -44.499977}
+  m_AnchoredPosition: {x: 95, y: -63}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144888813
@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2144932972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1875,7 +1875,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 931494241}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3284,7 +3284,7 @@ PrefabInstance:
       objectReference: {fileID: 2086486384}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: seasonDuration
-      value: 20
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6681161789500683614, guid: 897128dde20c7f649b44d30c1067f812, type: 3}
       propertyPath: playerBodyImage
@@ -3333,7 +3333,7 @@ RectTransform:
   m_Children:
   - {fileID: 934413086}
   m_Father: {fileID: 931494241}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

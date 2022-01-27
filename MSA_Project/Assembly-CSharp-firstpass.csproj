@@ -724,6 +724,11 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="lootlocker.lootlockersdk.runtime.csproj">
+      <Project>{B855FDF1-4CBD-6DC3-58FF-501272FDFE4A}</Project>
+      <Name>lootlocker.lootlockersdk.runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

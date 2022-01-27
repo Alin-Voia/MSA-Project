@@ -31,8 +31,8 @@ public class MainSceneControl : MonoBehaviour
 
 	public void LoadEndlessMode() 
 	{
-		Screen.orientation = ScreenOrientation.Landscape;
-		FindObjectOfType<ProgressSceneLoader>().LoadScene("endlessMode");
+		
+		SceneManager.LoadScene("loadingScreen");
 	}
 
 	public void NewGame()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -60,11 +61,16 @@ public class PlayerControl : MonoBehaviour
             soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
             isGrounded = false;
         }
-        else if(Input.touchCount > 0 && isGrounded && !isGameOver) {
-            playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
-            soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
-            isGrounded = false;
-            
+        else 
+        if (Input.touchCount > 0) {
+            if((Input.touches[0].position.x > Screen.width/6 || Input.touches[0].position.y < Screen.width/4 ) && 
+                isGrounded && 
+                !isGameOver) {
+                playerBody.AddForce(Vector3.up * (jump * playerBody.mass * playerBody.gravityScale * 20.0f));
+                soundEffectPlayer.PlayOneShot(jumpSound,1.0f);
+                isGrounded = false;
+                }
+                
         }
         if (transform.position.x < posX && !isGameOver) {
             GameOver();
